@@ -1,17 +1,21 @@
-"use client"
+"use client";
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import Image from "next/image"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Image from "next/image";
 
 export default function ProductDetails() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
+      {/* Tabs for Description, Additional Information, and Reviews */}
       <Tabs defaultValue="description" className="w-full">
+        {/* Tab navigation list with 3 items */}
         <TabsList className="grid w-full grid-cols-3 mb-8">
           <TabsTrigger value="description" className="text-lg">Description</TabsTrigger>
           <TabsTrigger value="additional" className="text-lg">Additional Information</TabsTrigger>
           <TabsTrigger value="reviews" className="text-lg">Reviews [5]</TabsTrigger>
         </TabsList>
+
+        {/* Tab content for "Description" */}
         <TabsContent value="description" className="space-y-6">
           <div className="prose max-w-none">
             <p className="text-gray-600 leading-relaxed mb-6">
@@ -25,6 +29,8 @@ export default function ProductDetails() {
               to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.
             </p>
           </div>
+
+          {/* Grid layout for images, responsive with 1 column on small screens and 2 columns on medium and larger screens */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-[#fdf6f0] rounded-lg p-8">
               <Image
@@ -46,11 +52,15 @@ export default function ProductDetails() {
             </div>
           </div>
         </TabsContent>
+
+        {/* Tab content for "Additional Information" */}
         <TabsContent value="additional">
           <div className="prose max-w-none">
             <p className="text-gray-600">Additional product information will be displayed here.</p>
           </div>
         </TabsContent>
+
+        {/* Tab content for "Reviews" */}
         <TabsContent value="reviews">
           <div className="prose max-w-none">
             <p className="text-gray-600">Product reviews will be displayed here.</p>
@@ -58,5 +68,5 @@ export default function ProductDetails() {
         </TabsContent>
       </Tabs>
     </div>
-  )
+  );
 }

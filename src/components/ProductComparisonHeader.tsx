@@ -17,9 +17,9 @@ export default function ProductComparison() {
         />
       </div>
 
-      {/* Content Overlay */}
-      <div className="relative flex h-full flex-col items-center justify-center">
-        {/* Logo */}
+      {/* Content Overlay: This layer holds the content on top of the background image */}
+      <div className="relative flex h-full flex-col items-center justify-center p-4 md:p-8">
+        {/* Logo Section */}
         <div className="mb-4">
           <Image
             src="/logo1.png"
@@ -47,4 +47,3 @@ export default function ProductComparison() {
     </div>
   )
 }
-

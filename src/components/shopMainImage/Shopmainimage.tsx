@@ -5,86 +5,71 @@ import { Input } from '../ui/input'
 function Shopmainimage() {
   return (
     <>
-    <section className='mb-[46px]'>
+      <section className="mb-[46px]">
 
-
-        <div className='w-full '>
-
-            <Image 
+        {/* Main image section */}
+        <div className="w-full">
+          <Image
             src="/shopMainImage.png"
             alt="shopImage"
             width={1440}
-            height={316}>
-
-
-            </Image>
+            height={316}
+            layout="responsive" // Ensures the image scales properly on different screen sizes
+          />
         </div>
 
+        {/* Bottom section with filter and sort options */}
+        <div className="flex flex-wrap items-center justify-between w-full h-[100px] bg-[#f9f1e7] px-4">
 
-        <div className=' flex items-center justify-around w-full h-[100px] bg-[#f9f1e7]'>
+          {/* Left side: Filter section */}
+          <div className="flex items-center gap-[64px] flex-wrap sm:flex-nowrap">
+            <div className="flex items-center">
+              <Image
+                src="/shopIcon1.png"
+                alt="shopIcon1"
+                width={25}
+                height={25}
+              />
+              <p className="text-[20px] leading-[30px] font-[400] font-poppins text-black ml-3 mr-[23px]">Filter</p>
 
-
-        {/* leftdiv */}
-
-        <div className='flex items-center justify-items-start gap-[64px] '>
-            <div className='flex items-center justify-center'>
-            <Image
-            src="/shopIcon1.png"
-            alt="shopIcon1"
-            width={25}
-            height={25}>
-
-            </Image>
-
-            <p className='text-[20px] leading-[30px] font[400] font-poppins text-black ml-3 mr-[23px]'>Filter</p>
-
-            <Image
-            src="/shopIcon2.png"
-            alt="shopIcon1"
-            width={25}
-            height={25}>
-
-            </Image>
-            <Image
-            src="/shopIcon3.png"
-            alt="shopIcon1"
-            width={25}
-            height={25}
-            
-            className='ml-[24px]'>
-
-            </Image>
+              <Image
+                src="/shopIcon2.png"
+                alt="shopIcon2"
+                width={25}
+                height={25}
+              />
+              <Image
+                src="/shopIcon3.png"
+                alt="shopIcon3"
+                width={25}
+                height={25}
+                className="ml-[24px]"
+              />
             </div>
 
-            <div className='w-[237px] border-l-2 border-black '>
-
-                <p className='pl-[34px] text-[16px] leading-[24px] font[400] font-poppins text-black'>Showing 1–16 of 32 results</p>
-
+            <div className="w-[237px] border-l-2 border-black">
+              <p className="pl-[34px] text-[16px] leading-[24px] font-[400] font-poppins text-black">
+                Showing 1–16 of 32 results
+              </p>
             </div>
+          </div>
 
-        </div>
-
-
-        {/* rightdiv */}
-
-        <div className='flex items-center justify-center text-[20px] leading-[30px]  '>
-
-            <p className='pr-[35px]'>Show</p>
+          {/* Right side: Sort and Show options */}
+          <div className="flex items-center justify-center text-[20px] leading-[30px] gap-4 sm:gap-[35px]">
+            <p className="pr-[35px]">Show</p>
             <Input
-            placeholder='16'
-            className='w-[55px] h-[55px]  bg-white rounded-none text-center mr-[29px]  text-[16px] leading-[24px] font[400] font-poppins text-[#9f9f9f]'
+              placeholder="16"
+              className="w-[55px] h-[55px] bg-white rounded-none text-center mr-[29px] text-[16px] leading-[24px] font-[400] font-poppins text-[#9f9f9f]"
             />
-
-            <p className='pr-[35px]'>Short By</p>
+            <p className="pr-[35px]">Sort By</p>
             <Input
-            placeholder='Default'
-            className='w-[188px] h-[55px]  bg-white rounded-none text-center   text-[16px] leading-[24px] font[400] font-poppins text-[#9f9f9f]'
+              placeholder="Default"
+              className="w-[188px] h-[55px] bg-white rounded-none text-center text-[16px] leading-[24px] font-[400] font-poppins text-[#9f9f9f]"
             />
+          </div>
 
         </div>
-
-        </div>
-    </section>
+      </section>
     </>
   )
 }

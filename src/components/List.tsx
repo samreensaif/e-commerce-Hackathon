@@ -6,8 +6,8 @@ interface ProductSpec {
   values: string[]
 }
 
-
 export default function List() {
+  // Product specifications, dimensions, and warranty details
   const specifications: ProductSpec[] = [
     {
       label: "Sales Package",
@@ -35,7 +35,6 @@ export default function List() {
     },
   ]
 
-
   const ProductSpecifications: ProductSpec[] = [
     {
       label: "Filling Material",
@@ -58,8 +57,6 @@ export default function List() {
       values: ["India", "India"]
     },
   ]
-
-
 
   const dimensions: ProductSpec[] = [
     {
@@ -121,6 +118,7 @@ export default function List() {
     <Card className="w-full max-w-7xl mx-auto p-6">
       <div className="grid grid-cols-1 md:grid-cols-[200px_1fr_1fr] gap-6">
 
+        {/* Left Section: Product specifications */}
         <div>
           <section>
             <h2 className="text-2xl font-medium mb-4">General</h2>
@@ -142,8 +140,9 @@ export default function List() {
             <SpecificationList specs={warranty} />
           </section>
 
+          {/* Right Section: Add to Cart Buttons */}
           <div className="grid md:grid-cols-[200px_1fr_1fr] gap-4">
-            <div className="hidden md:block  gap-[300px]" />
+            <div className="hidden md:block gap-[300px]" />
             <Button className="bg-[#B88E2F] hover:bg-[#9A7626] text-white">Add To Cart</Button>
             <Button className="bg-[#B88E2F] hover:bg-[#9A7626] text-white">Add To Cart</Button>
           </div>
@@ -153,6 +152,7 @@ export default function List() {
   )
 }
 
+// Component for rendering a list of specifications
 function SpecificationList({ specs }: { specs: ProductSpec[] }) {
   return (
     <div className="space-y-4">
@@ -161,7 +161,10 @@ function SpecificationList({ specs }: { specs: ProductSpec[] }) {
           key={index}
           className="grid md:grid-cols-[200px_1fr_1fr] gap-4 py-2 border-b last:border-b-0"
         >
+          {/* Specification Label */}
           <div className="font-medium">{spec.label}</div>
+          
+          {/* Specification Values */}
           {spec.values.map((value, i) => (
             <div key={i} className="text-gray-600 w-[300px]">
               {value}
@@ -172,4 +175,3 @@ function SpecificationList({ specs }: { specs: ProductSpec[] }) {
     </div>
   )
 }
-

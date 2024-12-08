@@ -8,22 +8,21 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product }: ProductCardProps) {
-    const formatPrice = (price: number, currency: string = 'Rp') => {
-        return `${currency} ${price.toLocaleString()}`;
-      };
-      
+  // Helper function to format price
+  const formatPrice = (price: number, currency: string = 'Rp') => {
+    return `${currency} ${price.toLocaleString()}`;
+  };
 
   return (
     <div 
-      className={`group relative w-full max-w-sm ${
-        product.id === '2' ? 'overlay-wrapper' : ''
-      }`}
+      className={`group relative w-full max-w-xs sm:max-w-sm lg:max-w-md ${product.id === '2' ? 'overlay-wrapper' : ''}`}
     >
       {/* Card Overlay for ID 2 */}
       {product.id === '2' && (
         <div className="absolute inset-0 bg-black bg-opacity-50 z-10 pointer-events-none"></div>
       )}
 
+      {/* Product Image */}
       <div className="relative aspect-square overflow-hidden bg-gray-100">
         <Image
           src={product.src} // Ensure correct image path
@@ -31,15 +30,17 @@ export function ProductCard({ product }: ProductCardProps) {
           className="object-cover transition-transform group-hover:scale-105"
           fill
         />
+        {/* Product Tag */}
         {product.tag && (
           <div
             className={`absolute left-4 top-4 rounded-full px-3 py-1 text-sm text-white
               ${product.tag === 'new' ? 'bg-green-500' : 'bg-red-500'}`}
           >
             {product.tag === 'new' ? 'New' : `-${product.salePercentage}%`}
-
           </div>
         )}
+        
+        {/* Card Action Buttons (appears on hover) */}
         <div className="absolute inset-x-0 bottom-0 bg-black bg-opacity-0 p-4 transition-all group-hover:bg-opacity-20">
           <div className="flex justify-center space-x-4 opacity-0 transition-opacity group-hover:opacity-100">
             <Button variant="ghost" size="icon" className="h-10 w-10 bg-white">
@@ -54,9 +55,13 @@ export function ProductCard({ product }: ProductCardProps) {
           </div>
         </div>
       </div>
+
+      {/* Product Details Section */}
       <div className="mt-4 space-y-2">
         <h3 className="text-lg font-medium">{product.name}</h3>
         <p className="text-sm text-gray-500">{product.description}</p>
+
+        {/* Price and Discount Section */}
         <div className="flex items-center space-x-2">
           <span className="text-lg font-bold">{formatPrice(product.price)}</span>
           {product.originalPrice && (
@@ -66,6 +71,8 @@ export function ProductCard({ product }: ProductCardProps) {
           )}
         </div>
       </div>
+
+      {/* Add to Cart Button for specific product ID */}
       {product.id === '2' && (
         <Button className="mt-2 w-full bg-[#B88E2F] hover:bg-[#A17B2A] text-white">
           Add to cart

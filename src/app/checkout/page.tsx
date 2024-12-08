@@ -18,35 +18,30 @@ import Shopbottombar from "@/components/shopBottomBar/Shopbottombar"
 
 export default function CheckoutForm() {
   return (
-    <div className="min-h-screen bg-white  px-4">
+    <div className="min-h-screen bg-white px-4 md:px-8 lg:px-12">
 
-<div className="bg-[url('/blogMainImage.png')] bg-cover mb-[63px] bg-center py-16">
-    <div className="container text-center">
-      <div className="inline-block w-16 h-16 bg-[url('/logo1.png')]  mb-4" />
-      <h1 className="text-4xl font-medium mb-4 font-poppins">CheckOut</h1>
-      <div className="flex items-center justify-center gap-2 text-sm">
-        <a href="#" className="hover:underline">Home</a>
-        <span>
-            <Image
-            src={"/rightA.png"}
-            width={20}
-            height={20}
-            alt="arrow"
-            ></Image>
-        </span>
-        <span>Checkout</span>
+      {/* Hero Section */}
+      <div className="bg-[url('/blogMainImage.png')] bg-cover bg-center py-16 mb-12">
+        <div className="container text-center">
+          <div className="inline-block w-16 h-16 bg-[url('/logo1.png')] mb-4" />
+          <h1 className="text-3xl md:text-4xl font-medium mb-4 font-poppins">CheckOut</h1>
+          <div className="flex items-center justify-center gap-2 text-sm">
+            <a href="#" className="hover:underline">Home</a>
+            <span>
+              <Image src="/rightA.png" width={20} height={20} alt="arrow" />
+            </span>
+            <span>Checkout</span>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-
-
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 mb-[123px]">
+      {/* Main Content */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
         {/* Billing Details Form */}
         <div>
-          <h2 className="text-3xl font-semibold mb-8">Billing details</h2>
+          <h2 className="text-2xl md:text-3xl font-semibold mb-6 md:mb-8">Billing details</h2>
           <form className="space-y-6">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="space-y-2">
                 <Label htmlFor="firstName">First Name</Label>
                 <Input id="firstName" required />
@@ -123,7 +118,7 @@ export default function CheckoutForm() {
           <Card>
             <CardContent className="p-6">
               <div className="space-y-4">
-                <div className="flex justify-between text-xl font-medium">
+                <div className="flex justify-between text-lg md:text-xl font-medium">
                   <span>Product</span>
                   <span>Subtotal</span>
                 </div>
@@ -179,23 +174,3 @@ export default function CheckoutForm() {
     </div>
   )
 }
-
-
-{/* <section className="bg-[url('/blogMainImage.png')] bg-cover bg-center py-16">
-    <div className="container text-center">
-      <div className="inline-block w-16 h-16 bg-[url('/logo1.png')]  mb-4" />
-      <h1 className="text-4xl font-medium mb-4 font-poppins">CheckOut</h1>
-      <div className="flex items-center justify-center gap-2 text-sm">
-        <a href="#" className="hover:underline">Home</a>
-        <span>
-            <Image
-            src={"/rightA.png"}
-            width={20}
-            height={20}
-            alt="arrow"
-            ></Image>
-        </span>
-        <span>Checkout</span>
-      </div>
-    </div>
-  </section> */}
