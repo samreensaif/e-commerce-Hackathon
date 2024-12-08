@@ -10,7 +10,7 @@ function Shopmainimage() {
         {/* Main image section */}
         <div className="w-full">
           <Image
-            src="/shopMainImage.png"
+            src="/blogMainImage.png"
             alt="shopImage"
             width={1440}
             height={316}
