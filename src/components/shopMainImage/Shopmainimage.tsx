@@ -7,16 +7,25 @@ function Shopmainimage() {
     <>
       <section className="mb-[46px]">
 
-        {/* Main image section */}
-        <div className="w-full">
-          <Image
-            src="/blogMainImage.png"
-            alt="shopImage"
-            width={1440}
-            height={316}
-            layout="responsive" // Ensures the image scales properly on different screen sizes
-          />
+       {/* Banner Section */}
+      <div className="bg-[url('/blogMainImage.png')] bg-cover mb-10 bg-center py-16">
+        <div className="container text-center">
+          <div className="inline-block w-16 h-16 bg-[url('/logo1.png')] mb-4" />
+          <h1 className="text-4xl font-medium mb-4 font-poppins">Shopt</h1>
+          <div className="flex items-center justify-center gap-2 text-sm">
+            <a href="#" className="hover:underline">Home</a>
+            <span>
+              <Image
+                src="/rightA.png"
+                width={20}
+                height={20}
+                alt="arrow"
+              />
+            </span>
+            <span>Shop</span>
+          </div>
         </div>
+      </div>
 
         {/* Bottom section with filter and sort options */}
         <div className="flex flex-wrap items-center justify-between w-full h-[100px] bg-[#f9f1e7] px-4">
