@@ -38,10 +38,10 @@ export default function Navbar() {
             Shop
           </Link>
           <Link 
-            href="/about" 
+            href="/blog" 
             className="text-base font-medium font-poppins text-black hover:text-black/70 transition-colors"
           >
-            About
+            Blog
           </Link>
           <Link 
             href="/contact" 

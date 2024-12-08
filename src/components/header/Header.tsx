@@ -87,7 +87,7 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
           <nav className="flex items-center gap-8 text-base">
             <a className="font-medium">Home</a>
             <a className="font-medium">Shop</a>
-            <a className="font-medium">About</a>
+            <a className="font-medium">Blog</a>
             <a className="font-medium">Contact</a>
           </nav>
         </nav>
