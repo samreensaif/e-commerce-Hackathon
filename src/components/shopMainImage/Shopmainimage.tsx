@@ -11,7 +11,7 @@ function Shopmainimage() {
       <div className="bg-[url('/blogMainImage.png')] bg-cover mb-10 bg-center py-16">
         <div className="container text-center">
           <div className="inline-block w-16 h-16 bg-[url('/logo1.png')] mb-4" />
-          <h1 className="text-4xl font-medium mb-4 font-poppins">Shopt</h1>
+          <h1 className="text-4xl font-medium mb-4 font-poppins">Shop</h1>
           <div className="flex items-center justify-center gap-2 text-sm">
             <a href="#" className="hover:underline">Home</a>
             <span>
