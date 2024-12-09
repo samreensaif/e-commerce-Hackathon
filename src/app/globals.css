@@ -13,6 +13,7 @@ body{
   max-width: 1440px;
   font-family: 'Poppins', sans-serif;
   margin:auto;
+  overflow-x: hidden;
   
 }
 
