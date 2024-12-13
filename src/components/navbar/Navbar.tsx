@@ -8,20 +8,22 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="relative w-full bg-white">
+    <nav className="relative w-full bg-white z-50">
       {/* Main container for Navbar */}
-      <div className="max-w-[1286px] mx-auto px-4 lg:ml-[60px]
+      <div className="max-w-[1286px] mx-auto px-4 lg:ml-[60px] 
          sm:px-0 ml-[51px] sm:ml-0 flex items-center justify-between h-[41px] mt-[29px]  ">
         
         {/* Logo Section */}
-        <div className="flex items-center gap-1   xsm:ml-[100px] ">
+        <div className="flex items-left  gap-1 exsm:mr-0   xsm:ml-[100px] ">
           
-          <h1 className=" xsm:text-[30px]     
+          <h1 className="  exsm:ml-5  xsm:text-[30px]  
+            
           sm:ml-0   
           md:ml-[-80px]  md:p-0
           font-bold font-montserrat text-[25px] ml-20  text-black flex items-center gap-4">
            
-            <div><Image src={'/logo.png'} alt={'Logo'} height={32} width={50} 
+            <div className=' '>
+              <Image src={'/logo.png'} alt={'Logo'} height={32} width={50} 
             className='md:w-[40px] md:h-[25px]'></Image></div>
             Furniro
           </h1>
@@ -46,14 +48,16 @@ export default function Navbar() {
           <button aria-label="Wishlist" className="p-2 hover:bg-black/5 rounded-full transition-colors">
             <Heart className="w-6 h-6" />
           </button>
+          <Link href="/cart">
           <button aria-label="Shopping Cart" className="p-2 hover:bg-black/5 rounded-full transition-colors">
             <ShoppingCart className="w-6 h-6" />
           </button>
+          </Link>
         </div>
       </div>
 
       {/* Mobile View - Hamburger Menu */}
-      <div className="sm:hidden  flex items-center justify-between px-4 py-2">
+      <div className="sm:hidden  flex items-center justify-between px-4 py-0 ">
         <button
           aria-label="Menu"
           className="p-2"
@@ -71,7 +75,7 @@ export default function Navbar() {
           menuOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
-        <div className="flex flex-col items-center gap-4 py-4">
+        <div className="flex flex-col items-center gap-4 py-4 bg-[#fff3e3]">
           <Link href="/" className="text-base font-medium font-poppins text-black hover:text-black/70 transition-colors" onClick={() => setMenuOpen(false)}>Home</Link>
           <Link href="/shop" className="text-base font-medium font-poppins text-black hover:text-black/70 transition-colors" onClick={() => setMenuOpen(false)}>Shop</Link>
           <Link href="/blog" className="text-base font-medium font-poppins text-black hover:text-black/70 transition-colors" onClick={() => setMenuOpen(false)}>Blog</Link>

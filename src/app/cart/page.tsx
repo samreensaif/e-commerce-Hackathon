@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Shopbottombar from '@/components/shopBottomBar/Shopbottombar'
 import { Input } from '@/components/ui/input'
 import { Trash } from 'lucide-react'
+import Link from 'next/link'
 
 function Cart() {
   return (
@@ -66,6 +67,7 @@ function Cart() {
 
         {/* Right Div - Image */}
         <div className="w-full lg:w-[393px]">
+          <Link href="/checkout">
           <Image
             src="/cart1.png"
             alt="Cart Image"
@@ -73,6 +75,7 @@ function Cart() {
             height={390}
             className="max-w-full"
           />
+          </Link>
         </div>
       </div>
 

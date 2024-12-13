@@ -10,6 +10,9 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
+        'exsm': '320px',
+        // => @media (min-width: 480px) { ... }
+
         'xsm': '480px',
         // => @media (min-width: 480px) { ... }
 
