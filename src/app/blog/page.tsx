@@ -13,28 +13,27 @@ export default function Blog() {
     <div className="w-full relative bg-white flex flex-col items-start justify-start leading-normal tracking-normal">
       <main className="flex flex-col justify-start mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12">
         {/* heading */}
-        <div className="bg-[url('/blogMainImage.png')] bg-cover bg-center py-8 sm:py-10 md:py-12 lg:py-16 mb-8 min-h-[180px] sm:min-h-[200px] md:min-h-[220px] lg:min-h-[240px]">
-          <div className="container text-center px-4">
-            <div className="inline-block w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-[url('/logo1.png')] bg-cover mb-4" />
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-medium mb-4 font-poppins">Blog</h1>
-            <div className="flex items-center justify-center gap-2 text-sm md:text-base">
-              <a href="#" className="hover:underline">Home</a>
-              <span>
-                <Image
-                  src="/rightA.png"
-                  width={16}
-                  height={16}
-                  className="w-4 h-4 md:w-5 md:h-5"
-                  alt="arrow"
-                />
-              </span>
-              <span>Blog</span>
-            </div>
+
+<section className="bg-[url('/blogMainImage.png')] bg-cover bg-center py-12 md:py-16">
+        <div className="container mx-auto px-4 text-center">
+          <div className="inline-block w-16 h-16 bg-[url('/logo1.png')] mb-4" />
+          <h1 className="text-3xl md:text-4xl font-medium mb-4">Blog</h1>
+          <div className="flex items-center justify-center gap-2 text-sm">
+            <a href="#" className="hover:underline">
+              Home
+            </a>
+            <span>
+              <Image src={"/rightA.png"} width={20} height={20} alt="arrow" />
+            </span>
+            <span>Blog</span>
           </div>
         </div>
+      </section>
+
+        
 
         {/* mainsection */}
-        <section className="w-full flex flex-col lg:flex-row items-start justify-start gap-6 lg:gap-10">
+        <section className="w-full mt-6 flex flex-col lg:flex-row items-start justify-start gap-6 lg:gap-10">
           {/* cards */}
           <div className="w-full">
             <BlogCenter />

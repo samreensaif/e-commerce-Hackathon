@@ -8,29 +8,31 @@ function Singleproduct() {
   return (
     <>
       {/* Breadcrumb Navigation Section */}
-      <div className="flex items-center w-full h-[100px] mt-3 bg-[#f9f1e7] px-4 md:px-10">
-        
-        {/* Breadcrumb Links */}
-        <div className="flex items-center text-lg md:text-[20px] leading-[30px] w-full">
-          
-          {/* Home Link */}
-          <p className="text-[#7c7474]">
-            Home
-            <ChevronRight className="inline ml-2 w-5 h-5 md:pl-[14px] md:w-[40px] md:h-[40px]" />
-          </p>
-          
-          {/* Shop Link */}
-          <p className="text-[#7c7474] ml-4 md:ml-6">
-            Shop
-            <ChevronRight className="inline ml-2 w-5 h-5 md:pl-[14px] md:w-[40px] md:h-[40px]" />
-          </p>
-          
-          {/* Product Name with Left Border */}
-          <div className="ml-4 md:ml-6 pl-4 md:pl-6 border-l-2 border-black">
-            <p className="font-medium">Asgaard Sofa</p>
-          </div>
-        </div>
-      </div>
+      <div className="w-full flex items-center min-h-[80px] sm:h-[100px] mt-2 sm:mt-3 bg-[#f9f1e7] px-2 exsm:px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 box-border">
+  {/* Breadcrumb Links */}
+  <div className="w-full flex items-center flex-wrap text-sm exsm:text-base sm:text-lg md:text-[20px] leading-[22px] exsm:leading-[24px] sm:leading-[28px] md:leading-[30px]">
+    
+    {/* Home Link */}
+    <p className="text-[#7c7474] flex items-center">
+      Home
+      <ChevronRight className="inline ml-1 exsm:ml-2 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7" />
+    </p>
+
+    {/* Shop Link */}
+    <p className="text-[#7c7474] ml-2 exsm:ml-3 sm:ml-4 md:ml-6 flex items-center">
+      Shop
+      <ChevronRight className="inline ml-1 exsm:ml-2 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7" />
+    </p>
+
+    {/* Product Name with Left Border */}
+    <div className="ml-2 exsm:ml-3 sm:ml-4 md:ml-6 pl-2 exsm:pl-3 sm:pl-4 md:pl-6 border-l-2 border-black">
+      <p className="font-medium text-sm exsm:text-base sm:text-lg md:text-xl">Asgaard Sofa</p>
+    </div>
+  </div>
+</div>
+
+
+
 
       {/* Main Product Section */}
       <Spmain />

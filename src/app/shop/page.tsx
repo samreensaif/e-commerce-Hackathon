@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { products } from "@/constant/product"
-import Shopmainimage from "@/components/shopMainImage/Shopmainimage"
+
 import Shopbottombar from "@/components/shopBottomBar/Shopbottombar"
 
 export default function ProductGrid() {
@@ -18,7 +18,23 @@ export default function ProductGrid() {
 
   return (
     <>
-      <Shopmainimage />
+     
+
+      <section className="bg-[url('/blogMainImage.png')] bg-cover bg-center py-12 md:py-16">
+              <div className="container mx-auto px-4 text-center">
+                <div className="inline-block w-16 h-16 bg-[url('/logo1.png')] mb-4" />
+                <h1 className="text-3xl md:text-4xl font-medium mb-4">Shop</h1>
+                <div className="flex items-center justify-center gap-2 text-sm">
+                  <a href="#" className="hover:underline">
+                    Home
+                  </a>
+                  <span>
+                    <Image src={"/rightA.png"} width={20} height={20} alt="arrow" />
+                  </span>
+                  <span>Shop</span>
+                </div>
+              </div>
+            </section>
 
       <div className="container mx-auto p-4 md:p-6">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">

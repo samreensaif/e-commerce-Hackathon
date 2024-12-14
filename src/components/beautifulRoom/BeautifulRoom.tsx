@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function BeautifulRoom() {
   
   return (
-    <section className="relative bg-pink-50 flex flex-col gap-[34px]  justify-between items-center py-[44px]
+    <section className="relative bg-[#fcf8f3] flex flex-col gap-[34px]  justify-between items-center py-[44px]
     lg:flex-row 
     ">
       

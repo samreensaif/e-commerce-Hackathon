@@ -1,3 +1,4 @@
+
 import React from 'react'
 import Image from 'next/image'
 
@@ -6,7 +7,7 @@ function Shopbottombar() {
     <>
       <section className="w-full h-auto items-center justify-center bg-[#f9f1e7] py-8 md:py-0">
         {/* Main container */}
-        <div className="w-full max-w-screen-xl flex flex-wrap m-auto gap-8 px-4 justify-center md:justify-between">
+        <div className="w-full max-w-screen-xl flex exsm:flex-wrap md:flex-nowrap m-auto gap-8 px-4 justify-center md:justify-between">
           {/* 1st Div - High Quality */}
           <div className="flex w-full exsm:w-[300px] xsm:w-[320px] sm:w-[337px] gap-4 items-center">
             <Image
@@ -85,5 +86,3 @@ function Shopbottombar() {
 }
 
 export default Shopbottombar
-
-
