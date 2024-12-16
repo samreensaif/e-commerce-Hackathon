@@ -10,7 +10,7 @@ export const pcCard = [
     },
     {
             src:"/sofa2.png",
-            heading:"Outdoor SOfa Set",
+            heading:"Outdoor Sofa Set",
             price:"Rs. 224,000.00",
             reviewNumber:"4.2",
             star:4,

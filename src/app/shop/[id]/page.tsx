@@ -3,8 +3,20 @@ import Productdetails from '@/components/productdetails/Productdetails'
 import Relatedproducts from '@/components/relatedProduct/Relatedproducts'
 import Spmain from '@/components/spmain/Spmain'
 import { ChevronRight } from 'lucide-react'
+import { products } from "@/constant/pro1"
+import Link from 'next/link'
 
-function Singleproduct() {
+
+
+
+async function Singleproduct({ params }: { params: Promise<{ id: number }> }) {
+  
+  const { id } = await params;
+
+  const data = products[id];
+
+  
+    
   return (
     <>
       {/* Breadcrumb Navigation Section */}
@@ -13,20 +25,25 @@ function Singleproduct() {
   <div className="w-full flex items-center flex-wrap text-sm exsm:text-base sm:text-lg md:text-[20px] leading-[22px] exsm:leading-[24px] sm:leading-[28px] md:leading-[30px]">
     
     {/* Home Link */}
-    <p className="text-[#7c7474] flex items-center">
+   <Link href="/">  
+   <p className="text-[#7c7474] flex items-center">
       Home
       <ChevronRight className="inline ml-1 exsm:ml-2 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7" />
     </p>
+   
+   </Link>
 
     {/* Shop Link */}
-    <p className="text-[#7c7474] ml-2 exsm:ml-3 sm:ml-4 md:ml-6 flex items-center">
+   <Link href="/shop">
+   <p className="text-[#7c7474] ml-2 exsm:ml-3 sm:ml-4 md:ml-6 flex items-center">
       Shop
       <ChevronRight className="inline ml-1 exsm:ml-2 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7" />
     </p>
+   </Link>
 
     {/* Product Name with Left Border */}
     <div className="ml-2 exsm:ml-3 sm:ml-4 md:ml-6 pl-2 exsm:pl-3 sm:pl-4 md:pl-6 border-l-2 border-black">
-      <p className="font-medium text-sm exsm:text-base sm:text-lg md:text-xl">Asgaard Sofa</p>
+      <p className="font-medium text-sm exsm:text-base sm:text-lg md:text-xl">{data.name}</p>
     </div>
   </div>
 </div>
@@ -35,10 +52,10 @@ function Singleproduct() {
 
 
       {/* Main Product Section */}
-      <Spmain />
+      <Spmain id={id}/>
 
       {/* Product Details Section */}
-      <Productdetails />
+      <Productdetails id={id} />
 
       {/* Related Products Section */}
       <Relatedproducts />
