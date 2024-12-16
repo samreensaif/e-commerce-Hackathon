@@ -1,11 +1,45 @@
+"use client";
+
 import Shopbottombar from "@/components/shopBottomBar/Shopbottombar";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { sendEmail } from "@/utils/emailService";
 import { Clock, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function ContactPage() {
+
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [subject, setSubject] = useState('')
+  const [message, setMessage] = useState('')
+
+const handleSubmit = async (e:React.FormEvent) => {
+e.preventDefault();
+
+const templateParams = {
+  to_name: "Samreen Saif",
+  from_name: name,
+  from_email: email,
+  subject: subject,
+  message: message
+}
+
+try {
+  await sendEmail(templateParams);
+  alert('Email sent successfully');
+  setName('');
+  setEmail('');
+  setSubject('');
+  setMessage('');
+} catch (error) {
+  console.error('Failed to send email', error);
+  alert('Failed to send email. Please try again.');
+}
+
+}
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
@@ -72,22 +106,22 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Form */}
-            <form className="md:col-span-2 space-y-6">
+            <form className="md:col-span-2 space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label className="font-medium mb-2 block">Your name</label>
-                <Input placeholder="Abc" />
+                <Input placeholder="Abc" name='name' value={name} onChange={(e) => setName(e.target.value)} />
               </div>
               <div>
                 <label className="font-medium mb-2 block">Email address</label>
-                <Input placeholder="Abc@def.com" type="email" />
+                <Input placeholder="Abc@def.com" type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)}  />
               </div>
               <div>
                 <label className="font-medium mb-2 block">Subject</label>
-                <Input placeholder="This is optional" />
+                <Input placeholder="This is optional" name="subject" value={subject} onChange={(e) => setSubject(e.target.value)}  />
               </div>
               <div>
                 <label className="font-medium mb-2 block">Message</label>
-                <Textarea placeholder="Hi! I'd like to ask about..." className="min-h-[120px]" />
+                <Textarea placeholder="Hi! I'd like to ask about..." className="min-h-[120px]" name="message" value={message} onChange={(e) => setMessage(e.target.value)} />
               </div>
               <Button className="w-full md:w-auto bg-[#B88E2F] hover:bg-[#B88E2F]/90">
                 Submit
