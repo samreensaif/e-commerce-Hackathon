@@ -80,6 +80,27 @@ export default function Navbar() {
           <Link href="/shop" className="text-base font-medium font-poppins text-black hover:text-black/70 transition-colors" onClick={() => setMenuOpen(false)}>Shop</Link>
           <Link href="/blog" className="text-base font-medium font-poppins text-black hover:text-black/70 transition-colors" onClick={() => setMenuOpen(false)}>Blog</Link>
           <Link href="/contact" className="text-base font-medium font-poppins text-black hover:text-black/70 transition-colors" onClick={() => setMenuOpen(false)}>Contact</Link>
+
+
+
+
+          <div className=" mt-2 sm:flex md:items-center gap-6 sm:pr-10">
+          <button aria-label="Account"  onClick={() => setMenuOpen(false)} className="p-2 hover:bg-black/5 rounded-full transition-colors">
+            <UserCircle className="w-6 h-6" />
+          </button>
+          <button aria-label="Search" onClick={() => setMenuOpen(false)} className="p-2 hover:bg-black/5 rounded-full transition-colors">
+            <Search className="w-6 h-6" />
+          </button>
+          <button aria-label="Wishlist" onClick={() => setMenuOpen(false)} className="p-2 hover:bg-black/5 rounded-full transition-colors">
+            <Heart className="w-6 h-6" />
+          </button>
+          <Link href="/cart">
+          <button aria-label="Shopping Cart" onClick={() => setMenuOpen(false)} className="p-2 hover:bg-black/5 rounded-full transition-colors">
+            <ShoppingCart className="w-6 h-6" />
+          </button>
+          </Link>
+        </div>
+
         </div>
       </div>
     </nav>
