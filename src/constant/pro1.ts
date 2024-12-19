@@ -10,11 +10,13 @@ export interface Product {
     salePercentage?: number
     discount?: number
     isNew?: boolean
+    reviewNumber?: number
+    star?: number
   }
   
   export const products: Product[] = [
     {
-      id: '1',
+      id: '0',
       name: "Syltherine",
       src: "/Syltherine.png",
       description: 'Stylish cafe chair',
@@ -23,17 +25,19 @@ export interface Product {
       image: '/Syltheriner.png',
       tag: 'sale',
       salePercentage: 30,
+      
     },
     {
-      id: '2',
+      id: '1',
       name: 'Leviosa',
       src: '/Leviosa.png', 
       description: 'Stylish table chair',
       price: 2500000,
       image: '/Leviosa.png',
+      
     },
     {
-      id: '3',
+      id: '2',
       name: 'Lolito',
       src: '/Lolito.png',
       description: 'Luxury big sofa',
@@ -42,26 +46,29 @@ export interface Product {
       image: '/Lolito.png',
       tag: 'sale',
       salePercentage: 50,
+     
     },
     {
-      id: '4',
+      id: '3',
       name: 'Respira',
       src: '/Respira.png',
       description: 'Outdoor bar table and stool',
       price: 500000,
       image: '/Respira.png',
       tag: 'new',
+      
     },
     {
-      id: '5',
+      id: '4',
       name: 'Grifo',
       src: '/1.png',
       description: 'Night lamp',
       price: 1500000,
       image: '/1.png',
+      
     },
     {
-      id: '6',
+      id: '5',
       name: 'Muggo',
       src: '/2.png',
       description: 'Small mug',
@@ -70,7 +77,7 @@ export interface Product {
       tag: 'new',
     },
     {
-      id: '7',
+      id: '6',
       name: 'Pingky',
       src: '/3.png',
       description: 'Cute bed set',
@@ -81,7 +88,7 @@ export interface Product {
       salePercentage: 50,
     },
     {
-      id: '8',
+      id: '7',
       name: 'Setty',
       src: '/4.png',
       description: 'Minimalist flower pot',
@@ -90,7 +97,7 @@ export interface Product {
       tag: 'new',
     },
     {
-      id: '9',
+      id: '8',
       name: 'Syltherine',
       src: "/Syltherine.png",
       description: 'Stylish cafe chair',
@@ -101,7 +108,7 @@ export interface Product {
       salePercentage: 30,
     },
     {
-      id: '10',
+      id: '9',
       name: 'Leviosa',
       src: '/Leviosa.png', 
       description: 'Stylish table chair',
@@ -109,7 +116,7 @@ export interface Product {
       image: '/Leviosa.png',
     },
     {
-      id: '11',
+      id: '10',
       name: 'Lolito',
       src: '/Lolito.png',
       description: 'Luxury big sofa',
@@ -120,7 +127,7 @@ export interface Product {
       salePercentage: 50,
     },
     {
-      id: '12',
+      id: '11',
       name: 'Respira',
       src: '/Respira.png',
       description: 'Outdoor bar table and stool',
@@ -129,7 +136,7 @@ export interface Product {
       tag: 'new',
     },
     {
-      id: '13',
+      id: '12',
       name: 'Grifo',
       src: '/1.png',
       description: 'Night lamp',
@@ -137,7 +144,7 @@ export interface Product {
       image: '/1.png',
     },
     {
-      id: '14',
+      id: '13',
       name: 'Muggo',
       src: '/2.png',
       description: 'Small mug',
@@ -146,7 +153,7 @@ export interface Product {
       tag: 'new',
     },
     {
-      id: '15',
+      id: '14',
       name: 'Pingky',
       src: '/3.png',
       description: 'Cute bed set',
@@ -157,7 +164,7 @@ export interface Product {
       salePercentage: 50,
     },
     {
-      id: '16',
+      id: '15',
       name: 'Setty',
       src: '/4.png',
       description: 'Minimalist flower pot',

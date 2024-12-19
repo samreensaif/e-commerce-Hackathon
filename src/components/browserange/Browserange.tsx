@@ -17,9 +17,9 @@ function Browserange() {
       </div>
 
       {/* Card Body Section */}
-      <div className="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-5   exsm:pl-1 ">
+      <div className="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-5   exsm:pl-1  ">
         {browseRange.map((item, index) => (
-          <div className="flex flex-col  items-center " key={index}>
+          <div className="flex flex-col  items-center transition-transform duration-300 hover:scale-105 " key={index}>
             
             {/* Top Image Container */}
             <div >

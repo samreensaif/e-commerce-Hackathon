@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { MinusIcon, PlusIcon, Star, StarHalf } from "lucide-react";
 import Link from "next/link";
@@ -8,21 +10,20 @@ import { Label } from "@/components/ui/label";
 import { products } from "@/constant/pro1";
 
 
-interface Product {
-  id: number;
-  name: string;
-  src: string; // Add this line
-  // Add other properties as needed
-}
+
 
 
  function Spmain(props:{id:number}) {
 
   
+  console.log("------------>",props)
   
 
   const data = products[props.id];
 
+
+  console.log("😎😍",data)
+  
 
   return (
     <div className="w-full mt-[30px] mb-[100px] px-4 md:px-6 lg:px-10">
@@ -119,9 +120,13 @@ interface Product {
             <Button variant={"outline"} className="w-full sm:w-[215px] h-[48px] sm:h-[64px] rounded-md sm:rounded-[15px]">Add To Cart</Button>
           </Link>
   
-          <Link href="/productComparison">
+          
+          <Link href={`/productComparison?id=${data.id}`}>
             <Button variant="outline" className="w-full sm:w-[215px] h-[48px] sm:h-[64px] rounded-md sm:rounded-[15px]">+ Compare</Button>
           </Link>
+
+
+
         </div>
       </div>
     </div>
